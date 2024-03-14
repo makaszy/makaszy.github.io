@@ -1,0 +1,56 @@
+@use '../variables/breakpoints.scss' as *;
+
+%marquee-container {
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+
+@mixin marquee-text($animation) {
+  font-family: "League Spartan", sans-serif;
+  display: inline-block;
+  white-space: nowrap;
+  animation: $animation linear infinite;
+}
+
+$horizontal: marquee-horizontal;
+$horizontal-alt: marquee-horizontal-alt;
+$vertical: marquee-vertical;
+$vertical-alt: marquee-vertical-alt;
+
+
+@keyframes marquee-horizontal {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-horizontal-alt {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes marquee-vertical {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes marquee-vertical-alt {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}

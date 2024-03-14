@@ -1,0 +1,153 @@
+@use '../utils/marquee.scss' as *;
+@use '../variables/colors.scss';
+@use '../variables/breakpoints.scss' as *;
+
+$top-bottom-distance: 26px; // used for absolute position elements [marquee, signature, scroll-icon]
+$right-distance: 15px; // used for absolute position elements [marquee, scroll-icon]
+$left-distance: 75px; // used for absolute position elements [signature]
+
+
+.header-letter-span {
+  position: relative;
+}
+
+.landing-page__marquee {
+  @extend %marquee-container;
+  position: absolute;
+  top: $top-bottom-distance;
+  right: $right-distance;
+  width: 30%;
+  max-width: 300px;
+}
+
+.marquee-text--landing-page {
+  @include marquee-text($horizontal);
+  font-size: 18px;
+}
+
+.landing-page {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.landing-page__headings {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.landing-page__header {
+  font-size: 60px;
+  z-index: 2;
+  -webkit-text-fill-color: colors.$sidebar-color;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: colors.$sidebar-background;
+  -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1)
+    both;
+  animation: tracking-in-expand 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+.header--alt-clr {
+  -webkit-text-stroke-color: colors.$sidebar-color;
+  -webkit-text-fill-color: colors.$sidebar-background;
+}
+
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.landing-page__signature {
+  opacity: 0;
+  position: absolute;
+  top: $top-bottom-distance;
+  left: $left-distance;
+  font-size: 24px;
+}
+
+.landing-page__signature,
+.landing-page__scroll-icon {
+  //hidden on smaller screens
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.landing-page__scroll-icon {
+  position: absolute;
+  bottom: $top-bottom-distance;
+  right: $right-distance;
+}
+
+.wrapper--scroll-icon {
+  //used as a background for the scroll icon
+  position: relative;
+  background-color: colors.$white;
+  width: 26px; //has to be even and bigger than the scroll-icon svg
+  height: 26px;
+  border-radius: 50%;
+}
+
+.scroll-icon {
+  position: absolute; //absolutely center the scroll icon svg
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: $medium-screen) {
+  .landing-page__header,
+  .header--alt-clr {
+    font-size: 96px;
+  }
+
+  .header--alt-background {
+    position: relative;
+  }
+
+  .header--alt-background::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: -1;
+    background-color: colors.$black;
+  }
+}
+
+@media screen and (min-width: $large-screen) {
+  .landing-page__scroll-icon,
+  .landing-page__signature {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,168 @@
+@use '../variables/colors.scss' as *;
+@use '../utils/marquee.scss' as *;
+@use '../variables/breakpoints.scss' as *;
+
+.section--contact {
+  width: 100%;
+  background-color: $white;
+  position: relative;
+}
+
+.contact__marquee {
+  @extend %marquee-container;
+  z-index: 1;
+  background-color: $pink;
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.marquee-text--contact,
+.marquee-text--contact-alt {
+  font-size: 28px;
+  -webkit-text-fill-color: $white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: $white;
+}
+.marquee-text--contact :nth-child(even),
+.marquee-text--contact-alt :nth-child(even) {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: $white;
+}
+
+.marquee-text--contact {
+  @include marquee-text($horizontal);
+}
+
+.marquee-text--contact-alt {
+  @include marquee-text($horizontal-alt);
+}
+
+.contact__info {
+  z-index: 2;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(0 0, 0 100%, 100% 0);
+  background-color: $black;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  opacity: 0.5;
+  transition: 1s;
+  overflow: visible;
+}
+
+.show--contact-info {
+  opacity: 1;
+}
+
+.info__heading {
+  padding: 10px;
+  border-top: 5px $pink solid;
+
+  font-size: 24px;
+  font-family: sans-serif;
+  -webkit-text-fill-color: $black;
+
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: $white;
+
+  border-bottom: 5px $pink solid;
+  background-color: $black;
+}
+
+.info__icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  display: flex;
+  gap: 5%;
+  justify-content: start;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 5px solid $black;
+  background-color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.decoration--contact-me {
+  display: none;
+}
+
+@media screen and (min-width: $large-screen) {
+  .contact__marquee-background {
+    display: none;
+  }
+
+  .contact__info {
+    clip-path: none;
+  }
+
+  .section--contact {
+    position: relative;
+    width: 50vw;
+    background-color: $black;
+  }
+
+  .info__heading {
+    position: absolute;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    top: 50px;
+    width: fit-content;
+    border-color: $black;
+    font-size: 50px;
+    text-align: center;
+    -webkit-text-fill-color: $white;
+    -webkit-text-stroke-color: $black;
+  }
+
+  .info__heading--span {
+    -webkit-text-fill-color: $black;
+    -webkit-text-stroke-color: $white;
+  }
+  
+  .decoration--contact-me {
+    display: block;
+    position: absolute;
+    top: 320px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 200px;
+    width: 200px;
+    position: relative;
+    animation: rotate-effect 20s linear infinite;
+    z-index: 3;
+  }
+
+  @keyframes rotate-effect {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .decoration-span--contact-me {
+    position: absolute;
+    left: 50%;
+    transform-origin: 0 100px;
+    color: $white;
+    z-index: 20;
+  }
+}

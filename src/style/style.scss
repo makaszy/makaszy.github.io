@@ -1,0 +1,41 @@
+//general
+@use './variables/colors.scss' as *;
+@use 'normalize.scss';
+@use './utils/marquee.scss';
+@use './variables/breakpoints.scss' as *;
+//header
+@use './header/sidebar.scss';
+//landing page;
+@use './landing-page/landing-page.scss';
+@use './landing-page/background-fluid.scss';
+@use '../style/variables/font.scss' as *;
+@use './landing-page/background-noise.scss';
+@use './projects-section/projects-section.scss';
+@use './about-me-section/about-me-section.scss';
+@use './utils/show.scss';
+@use './contact-section/contact-section.scss';
+@use './tech-list-section/tech-list.scss';
+
+html,
+body {
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  font-family: "League Spartan", sans-serif;;
+  scroll-behavior: smooth;
+}
+
+@media screen and (min-width: $large-screen) {
+  main {
+    display: flex;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    white-space: nowrap; /* Prevents wrapping of child elements */
+    width: 100%;
+    height: 100vh;
+    scroll-behavior: smooth;
+  }
+  main section {
+    flex: 0 0 auto; /* Prevents sections from growing or shrinking */
+    width: 100vw;
+  }
+}

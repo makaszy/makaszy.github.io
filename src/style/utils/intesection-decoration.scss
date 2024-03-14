@@ -1,0 +1,29 @@
+@use '../variables/breakpoints.scss' as *;
+
+@mixin intersection-decoration($color) {
+  position: absolute;
+  margin: auto;
+  background-color: $color;
+  transition: 1s all;
+
+  @media screen and (max-width: $large-screen) {
+    left: 0px;
+    right: 0px;
+    width: 5px;
+    height: 0px;
+  }
+
+  @media screen and (min-width: $large-screen) {
+    top: 0px;
+    bottom: 0px;
+    width: 0px;
+    height: 2px;
+  }
+}
+
+@mixin intersection-decoration--large-screen($color) {
+  position: absolute;
+  left: 10px;
+  background-color: $color;
+}
+

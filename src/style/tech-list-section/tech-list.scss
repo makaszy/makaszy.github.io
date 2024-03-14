@@ -1,0 +1,115 @@
+@use '../variables/colors.scss' as *;
+@use '../variables/breakpoints.scss' as *;
+@use '../utils/intesection-decoration.scss' as *;
+
+/* Base styles for the tech list section */
+.section--tech-list {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  background-color: $white;
+  padding: 30px 20px;
+}
+
+/* Container styles to center content vertically and horizontally */
+.container--tech-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+}
+
+/* Grid layout for the tech list */
+.tech-list {
+  display: grid;
+  max-width: 300px;
+}
+
+/* Grid layout for the tech list, with responsive adjustments */
+.tech-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(50px, 1fr));
+  gap: 10px;
+  width: 100%;
+  max-width: 300px;
+}
+
+/* Styles for individual list items */
+.tech-list__li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Animation and visibility for hidden list items */
+.hidden--tech-list {
+  opacity: 0;
+  filter: blur(2px);
+  transition:
+    opacity 1s,
+    transform 1s; /* Optimized transition property */
+  transform: translateX(-100%);
+}
+
+/* Staggered animation delays */
+.hidden--tech-list:nth-child(2n) {
+  transition-delay: 200ms;
+}
+.hidden--tech-list:nth-child(3n) {
+  transition-delay: 400ms;
+}
+
+/* Sidebar button color overrides */
+.override-color--sidebar-btn,
+.override-color--sidebar-btn::after,
+.override-color--sidebar-btn::before {
+  background-color: #f7f7f7;
+  border-color: #1f1f1f;
+}
+
+/* Styles for individual list items, allowing them to grow */
+.tech-list__li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.inter-section-decoration--tech-list {
+  @include intersection-decoration($color: $black);
+  top: 0px;
+}
+@media screen and (max-width: $large-screen) {
+  .inter-section-decoration--tech-list.extend-decor {
+    height: 25px;
+  }
+}
+
+@media screen and (min-width: $large-screen) {
+  .section--tech-list {
+    width: 85vw;
+  }
+
+  .inter-section-decoration--tech-list {
+    @include intersection-decoration($color: $black);
+    left: 0px;
+  }
+
+  .inter-section-decoration--tech-list.extend-decor {
+    width: 75px;
+  }
+
+  .tech-list {
+    grid-template-columns: repeat(
+      3,
+      minmax(185px, 1fr)
+    ); /* Larger min size for wider screens */
+    max-width: fit-content;
+  }
+}

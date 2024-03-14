@@ -1,0 +1,29 @@
+.background--fluid {
+  width: 100vw;
+  height: 100vh;
+}
+
+@keyframes animation--background-fluid {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.out-top {
+  animation: animation--background-fluid 30s linear infinite;
+  transform-origin: 13px 25px;
+}
+.in-top {
+  animation: animation--background-fluid 20s linear infinite;
+  transform-origin: 13px 25px;
+}
+.out-bottom {
+  animation: animation--background-fluid 35s linear infinite;
+  transform-origin: 84px 93px;
+}
+.in-bottom {
+  animation: animation--background-fluid 25s linear infinite;
+  transform-origin: 84px 93px;
+}

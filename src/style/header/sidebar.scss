@@ -1,0 +1,115 @@
+@use '../variables/colors.scss';
+@use './hamburger.scss' as *;
+@use '../variables/breakpoints.scss' as *;
+
+.sidebar {
+  position: fixed;
+  background-color: colors.$sidebar-background;
+  width: 0vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+  color: colors.$sidebar-color;
+  font-size: 27px;
+  transition: width 0.7s;
+  overflow: hidden;
+  z-index: 3; //to prevent heading from overlapping
+}
+
+nav {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.extend {
+  width: 100vw;
+}
+
+.sidebar__btn-div {
+  box-sizing: border-box;
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  width: 30px;
+  height: 50px;
+}
+
+.sidebar-btn--hamburger {
+  @extend %btn--hamburger;
+  font-size: 0px;
+  appearance: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.sidebar__nav,
+.sidebar__socials {
+  padding: 25px;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.sidebar__list {
+  white-space: nowrap;
+  color: inherit;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: end;
+  align-items: end;
+}
+
+.sidebar.extend .sidebar__nav,
+.sidebar.extend .sidebar__socials {
+  opacity: 1;
+}
+
+.nav__link {
+  padding-bottom: 5px; //for linear gradient space
+  text-decoration: none;
+  background-image: linear-gradient(white, white);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size 0.3s;
+}
+
+.nav__link:hover,
+.nav__link:focus {
+  background-size: 100% 3px;
+}
+
+// style for large screens
+
+@media screen and (min-width: $large-screen) {
+  .sidebar {
+    z-index: 5;
+    width: 50px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .extend {
+    width: 100vw;
+  }
+  .sidebar__btn-div {
+    left: 10px;
+  }
+  .sidebar__nav .sidebar__list {
+    justify-content: center;
+    align-items: start;
+    font-size: 80px;
+    padding-left: 100px;
+  }
+  .sidebar__socials {
+    opacity: 1;
+    position: fixed;
+    left: 12px;
+    bottom: 20px;
+    padding: 0px;
+  }
+}

@@ -1,0 +1,93 @@
+@use '../variables/colors.scss' as *;
+@use '../variables/breakpoints.scss' as *;
+
+$hamburger-line-height: 5px; // the weight of the line
+$hamburger-line-radius: 9px;
+$hamburger-line-width: 100%; // determined by the div containing the hamburger btn
+$open-color:  $white;
+$open-middle-bar-color: $black; //for hiding the middle bar when open
+
+:root { // for small screens
+  --closed-color: #{$black};
+  --border: #{$white};
+}
+
+%btn--hamburger {
+  position: absolute;
+  box-sizing: border-box;
+  background-color: var(--closed-color);
+  height: $hamburger-line-height;
+  width: $hamburger-line-width;
+  border-radius: $hamburger-line-radius;
+  border: 1px solid var(--border);
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+%btn--hamburger.open {
+  background-color: $open-middle-bar-color;
+  border: none;
+}
+
+%btn--hamburger::before {
+  top: -10px;
+}
+
+%btn--hamburger::after {
+  top: 9px;
+}
+
+%btn--hamburger::before,
+%btn--hamburger::after {
+  box-sizing: border-box;
+  border: 1px solid var(--border);
+  content: ' ';
+  background: inherit;
+  border-radius: inherit;
+  display: block;
+  position: absolute;
+  height: inherit;
+  width: inherit;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition:  0.25s ease-in-out;
+}
+
+%btn--hamburger.open::before,
+%btn--hamburger.open::after {
+  background-color: $open-color;
+  border-color: $open-middle-bar-color;
+  top: 50%;
+}
+
+%btn--hamburger.open::before {
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+%btn--hamburger.open::after {
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+@media screen and (min-width: $large-screen) { // for large screens
+  :root {
+    --closed-color: #{$white}; 
+    --border: #{$black};
+  }
+}

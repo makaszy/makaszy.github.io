@@ -1,0 +1,130 @@
+@use '../variables/colors.scss' as *;
+@use '../utils/marquee.scss' as *;
+@use '../variables/breakpoints.scss' as *;
+@use '../utils/intesection-decoration.scss' as *;
+
+.section--about {
+  width: 100%;
+  background-color: $black;
+  position: relative;
+}
+
+.about__marquee {
+  @extend %marquee-container;
+  background-color: $pink;
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  border-top: 2px solid $black;
+  border-bottom: 2px solid $black;
+}
+
+.marquee-text--about {
+  @include marquee-text($horizontal);
+  font-size: 28px;
+  -webkit-text-fill-color: $white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: $white;
+}
+
+.marquee-text--about :nth-child(even) {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: $white;
+}
+
+.about__info {
+  padding: 50px 0px;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.info__img {
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+}
+
+.info__text {
+  margin: 0px 20px;
+  text-align: justify;
+  max-width: 300px;
+}
+
+.inter-section-decoration--about {
+  @include intersection-decoration($color: $white);
+  bottom: 0px;
+}
+
+@media screen and (max-width: $large-screen) {
+  .inter-section-decoration--about.extend-decor {
+    height: 25px;
+  }
+}
+
+@media screen and (min-width: $large-screen) {
+  .about__marquee {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about__info {
+    width: 700px;
+    margin: 10% auto;
+    display: block;
+    white-space: normal;
+  }
+
+  .img-wrapper--info,
+  .info__img {
+    width: 350px;
+    height: 350px;
+    position: relative;
+    float: left;
+    shape-outside: circle(50%);
+  }
+
+  .marquee-text--about {
+    font-size: 48px;
+  }
+
+  .info__img {
+    display: none;
+    float: left;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    shape-outside: circle();
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  .info__text {
+    max-width: 100%;
+    font-size: 32px;
+  }
+
+  .about__info::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  .inter-section-decoration--about {
+    @include intersection-decoration($color: $white);
+    right: 0px;
+  }
+
+  .inter-section-decoration--about.extend-decor {
+    width: 75px;
+  }
+}

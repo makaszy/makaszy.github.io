@@ -1,0 +1,1526 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0px;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px; /* Removes bullets from unordered lists */
+}
+
+ol {
+  list-style-type: none; /* Removes numbers from ordered lists */
+}
+
+li {
+  list-style: none; /* Removes bullets or numbers from all list items */
+}
+
+p {
+  margin: 0px;
+}
+
+.contact__marquee, .about__marquee, .projects__marquee, .landing-page__marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+
+@keyframes marquee-horizontal {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+@keyframes marquee-horizontal-alt {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes marquee-vertical {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+@keyframes marquee-vertical-alt {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+:root {
+  --closed-color: #1f1f1f;
+  --border: #f7f7f7;
+}
+
+.sidebar-btn--hamburger {
+  position: absolute;
+  box-sizing: border-box;
+  background-color: var(--closed-color);
+  height: 5px;
+  width: 100%;
+  border-radius: 9px;
+  border: 1px solid var(--border);
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.open.sidebar-btn--hamburger {
+  background-color: #1f1f1f;
+  border: none;
+}
+
+.sidebar-btn--hamburger::before {
+  top: -10px;
+}
+
+.sidebar-btn--hamburger::after {
+  top: 9px;
+}
+
+.sidebar-btn--hamburger::before,
+.sidebar-btn--hamburger::after {
+  box-sizing: border-box;
+  border: 1px solid var(--border);
+  content: " ";
+  background: inherit;
+  border-radius: inherit;
+  display: block;
+  position: absolute;
+  height: inherit;
+  width: inherit;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.open.sidebar-btn--hamburger::before,
+.open.sidebar-btn--hamburger::after {
+  background-color: #f7f7f7;
+  border-color: #1f1f1f;
+  top: 50%;
+}
+
+.open.sidebar-btn--hamburger::before {
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.open.sidebar-btn--hamburger::after {
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+@media screen and (min-width: 1200px) {
+  :root {
+    --closed-color: #f7f7f7;
+    --border: #1f1f1f;
+  }
+}
+.sidebar {
+  position: fixed;
+  background-color: #1f1f1f;
+  width: 0vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+  color: #f7f7f7;
+  font-size: 27px;
+  transition: width 0.7s;
+  overflow: hidden;
+  z-index: 3;
+}
+
+nav {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.extend {
+  width: 100vw;
+}
+
+.sidebar__btn-div {
+  box-sizing: border-box;
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  width: 30px;
+  height: 50px;
+}
+
+.sidebar-btn--hamburger {
+  font-size: 0px;
+  appearance: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.sidebar__nav,
+.sidebar__socials {
+  padding: 25px;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.sidebar__list {
+  white-space: nowrap;
+  color: inherit;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: end;
+  align-items: end;
+}
+
+.sidebar.extend .sidebar__nav,
+.sidebar.extend .sidebar__socials {
+  opacity: 1;
+}
+
+.nav__link {
+  padding-bottom: 5px;
+  text-decoration: none;
+  background-image: linear-gradient(white, white);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size 0.3s;
+}
+
+.nav__link:hover,
+.nav__link:focus {
+  background-size: 100% 3px;
+}
+
+@media screen and (min-width: 1200px) {
+  .sidebar {
+    z-index: 5;
+    width: 50px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .extend {
+    width: 100vw;
+  }
+  .sidebar__btn-div {
+    left: 10px;
+  }
+  .sidebar__nav .sidebar__list {
+    justify-content: center;
+    align-items: start;
+    font-size: 80px;
+    padding-left: 100px;
+  }
+  .sidebar__socials {
+    opacity: 1;
+    position: fixed;
+    left: 12px;
+    bottom: 20px;
+    padding: 0px;
+  }
+}
+.header-letter-span {
+  position: relative;
+}
+
+.landing-page__marquee {
+  position: absolute;
+  top: 26px;
+  right: 15px;
+  width: 30%;
+  max-width: 300px;
+}
+
+.marquee-text--landing-page {
+  font-family: "League Spartan", sans-serif;
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee-horizontal linear infinite;
+  font-size: 18px;
+}
+
+.landing-page {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.landing-page__headings {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.landing-page__header {
+  font-size: 60px;
+  z-index: 2;
+  -webkit-text-fill-color: #f7f7f7;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #1f1f1f;
+  -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  animation: tracking-in-expand 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+.header--alt-clr {
+  -webkit-text-stroke-color: #f7f7f7;
+  -webkit-text-fill-color: #1f1f1f;
+}
+
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.landing-page__signature {
+  opacity: 0;
+  position: absolute;
+  top: 26px;
+  left: 75px;
+  font-size: 24px;
+}
+
+.landing-page__signature,
+.landing-page__scroll-icon {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.landing-page__scroll-icon {
+  position: absolute;
+  bottom: 26px;
+  right: 15px;
+}
+
+.wrapper--scroll-icon {
+  position: relative;
+  background-color: #f7f7f7;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+}
+
+.scroll-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 768px) {
+  .landing-page__header,
+  .header--alt-clr {
+    font-size: 96px;
+  }
+  .header--alt-background {
+    position: relative;
+  }
+  .header--alt-background::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: -1;
+    background-color: #1f1f1f;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .landing-page__scroll-icon,
+  .landing-page__signature {
+    opacity: 1;
+  }
+}
+.background--fluid {
+  width: 100vw;
+  height: 100vh;
+}
+
+@keyframes animation--background-fluid {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.out-top {
+  animation: animation--background-fluid 30s linear infinite;
+  transform-origin: 13px 25px;
+}
+
+.in-top {
+  animation: animation--background-fluid 20s linear infinite;
+  transform-origin: 13px 25px;
+}
+
+.out-bottom {
+  animation: animation--background-fluid 35s linear infinite;
+  transform-origin: 84px 93px;
+}
+
+.in-bottom {
+  animation: animation--background-fluid 25s linear infinite;
+  transform-origin: 84px 93px;
+}
+
+@font-face {
+  font-family: "garamond";
+  src: url("../src/assets/fonts/EBGaramond-VariableFont_wght.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "garamond-italics";
+  src: url("../src/assets/fonts/EBGaramond-Italic-VariableFont_wght.ttf");
+  font-weight: normal;
+  font-style: italic;
+}
+.limelight-regular {
+  font-family: "Limelight", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.league-spartan-bold {
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.background--noise {
+  pointer-events: none;
+  z-index: 5;
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 400vh;
+  background: url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
+  background-repeat: repeat;
+  animation: background-noise--medium 0.5s infinite;
+  opacity: 0.5;
+}
+
+@keyframes background-noise--low {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-10%, 10%);
+  }
+}
+@keyframes background-noise--medium {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-10%, 10%);
+  }
+  50% {
+    transform: translate(10%, -10%);
+  }
+  75% {
+    transform: translate(-10%, 10%);
+  }
+}
+@keyframes background-noise--high {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -5%);
+  }
+  20% {
+    transform: translate(-10%, 5%);
+  }
+  30% {
+    transform: translate(5%, -10%);
+  }
+  40% {
+    transform: translate(-5%, 15%);
+  }
+  50% {
+    transform: translate(-10%, 5%);
+  }
+  60% {
+    transform: translate(15%, 0);
+  }
+  70% {
+    transform: translate(0, 10%);
+  }
+  80% {
+    transform: translate(-15%, 0);
+  }
+  90% {
+    transform: translate(10%, 5%);
+  }
+  100% {
+    transform: translate(5%, 0);
+  }
+}
+.section--projects {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+  padding-bottom: 50px;
+}
+
+.projects__marquee {
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  border-top: 2px solid #1f1f1f;
+  border-bottom: 2px solid #1f1f1f;
+}
+
+.marquee-text--projects {
+  font-size: 28px;
+  color: #f0a5b9;
+  font-weight: 700;
+  font-family: "League Spartan", sans-serif;
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee-horizontal linear infinite;
+}
+
+.projects__project-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+}
+
+.project-list__li {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.project-list__li:focus .project__img,
+.project-list__li:active .project__img,
+.project-list__li:hover .project__img {
+  rotate: -3deg;
+  border-radius: 40px;
+}
+
+.project {
+  color: #f0a5b9;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0px;
+}
+
+.project__link {
+  padding: 5px 10px 2px 10px;
+  background-color: #1f1f1f;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.project__img {
+  position: relative;
+  max-width: 100%;
+  border: 2px solid #1f1f1f;
+  transition: all 0.5s;
+  border-radius: 5px 40px 40px 40px;
+}
+
+.wrapper--img {
+  background-color: #1f1f1f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px 40px 40px 40px;
+}
+
+.project--alt-position {
+  align-items: flex-end;
+}
+
+.project--alt-position .project__img {
+  border-radius: 40px 0px 40px 40px;
+}
+
+.project--alt-position .wrapper--img {
+  border-radius: 40px 0px 40px 40px;
+}
+
+.project-list__li:focus .project--alt-position .project__img,
+.project-list__li:active .project--alt-position .project__img,
+.project-list__li:hover .project--alt-position .project__img {
+  rotate: 3deg;
+  border-radius: 40px;
+}
+
+/* hidden */
+.hidden--projects {
+  opacity: 0;
+  filter: blur(2px);
+  transition: all 1s;
+  transform: translateX(-100%);
+}
+
+.hidden--projects:nth-of-type(even) {
+  transform: translateX(100%);
+}
+
+@media (prefers-reduced-motion) {
+  .hidden--projects {
+    transition: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section--projects {
+    position: relative;
+    width: 100%;
+    min-width: 250vh;
+    height: 100vh;
+    overflow-y: hidden;
+    flex-direction: row;
+    gap: 20px;
+    padding-right: 20px;
+    padding-bottom: 0px;
+    align-items: center;
+  }
+  .project-list__li {
+    max-width: 900px;
+  }
+  .projects__marquee {
+    width: 200px;
+    height: 100%;
+    border: 2px solid black;
+    border-bottom: 0px;
+    border-top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .marquee-text--projects {
+    writing-mode: vertical-rl;
+    font-family: "League Spartan", sans-serif;
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee-vertical linear infinite;
+    font-size: 48px;
+  }
+  .project-list {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 50px;
+    width: 100%;
+  }
+  .hidden--projects {
+    transform: translateY(-100%);
+  }
+  .hidden--projects:nth-of-type(even) {
+    transform: translateY(100%);
+  }
+}
+.section--about {
+  width: 100%;
+  background-color: #1f1f1f;
+  position: relative;
+}
+
+.about__marquee {
+  background-color: #f0a5b9;
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  border-top: 2px solid #1f1f1f;
+  border-bottom: 2px solid #1f1f1f;
+}
+
+.marquee-text--about {
+  font-family: "League Spartan", sans-serif;
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee-horizontal linear infinite;
+  font-size: 28px;
+  -webkit-text-fill-color: #f7f7f7;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #f7f7f7;
+}
+
+.marquee-text--about :nth-child(even) {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #f7f7f7;
+}
+
+.about__info {
+  padding: 50px 0px;
+  color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.info__img {
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+}
+
+.info__text {
+  margin: 0px 20px;
+  text-align: justify;
+  max-width: 300px;
+}
+
+.inter-section-decoration--about {
+  position: absolute;
+  margin: auto;
+  background-color: #f7f7f7;
+  transition: 1s all;
+  bottom: 0px;
+}
+@media screen and (max-width: 1200px) {
+  .inter-section-decoration--about {
+    left: 0px;
+    right: 0px;
+    width: 5px;
+    height: 0px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .inter-section-decoration--about {
+    top: 0px;
+    bottom: 0px;
+    width: 0px;
+    height: 2px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .inter-section-decoration--about.extend-decor {
+    height: 25px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about__marquee {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about__info {
+    width: 700px;
+    margin: 10% auto;
+    display: block;
+    white-space: normal;
+  }
+  .img-wrapper--info,
+  .info__img {
+    width: 350px;
+    height: 350px;
+    position: relative;
+    float: left;
+    shape-outside: circle(50%);
+  }
+  .marquee-text--about {
+    font-size: 48px;
+  }
+  .info__img {
+    display: none;
+    float: left;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    shape-outside: circle();
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  .info__text {
+    max-width: 100%;
+    font-size: 32px;
+  }
+  .about__info::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .inter-section-decoration--about {
+    position: absolute;
+    margin: auto;
+    background-color: #f7f7f7;
+    transition: 1s all;
+    right: 0px;
+  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1200px) {
+  .inter-section-decoration--about {
+    left: 0px;
+    right: 0px;
+    width: 5px;
+    height: 0px;
+  }
+}
+@media screen and (min-width: 1200px) and (min-width: 1200px) {
+  .inter-section-decoration--about {
+    top: 0px;
+    bottom: 0px;
+    width: 0px;
+    height: 2px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .inter-section-decoration--about.extend-decor {
+    width: 75px;
+  }
+}
+.show {
+  opacity: 1 !important;
+  filter: blur(0) !important;
+  transform: translateX(0) !important;
+}
+
+@media screen and (min-width: 1200px) {
+  .show {
+    opacity: 1 !important;
+    filter: blur(0) !important;
+    transform: translateY(0) !important;
+  }
+}
+.section--contact {
+  width: 100%;
+  background-color: #f7f7f7;
+  position: relative;
+}
+
+.contact__marquee {
+  z-index: 1;
+  background-color: #f0a5b9;
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.marquee-text--contact,
+.marquee-text--contact-alt {
+  font-size: 28px;
+  -webkit-text-fill-color: #f7f7f7;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #f7f7f7;
+}
+
+.marquee-text--contact :nth-child(even),
+.marquee-text--contact-alt :nth-child(even) {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #f7f7f7;
+}
+
+.marquee-text--contact {
+  font-family: "League Spartan", sans-serif;
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee-horizontal linear infinite;
+}
+
+.marquee-text--contact-alt {
+  font-family: "League Spartan", sans-serif;
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee-horizontal-alt linear infinite;
+}
+
+.contact__info {
+  z-index: 2;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(0 0, 0 100%, 100% 0);
+  background-color: #1f1f1f;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  opacity: 0.5;
+  transition: 1s;
+  overflow: visible;
+}
+
+.show--contact-info {
+  opacity: 1;
+}
+
+.info__heading {
+  padding: 10px;
+  border-top: 5px #f0a5b9 solid;
+  font-size: 24px;
+  font-family: sans-serif;
+  -webkit-text-fill-color: #1f1f1f;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #f7f7f7;
+  border-bottom: 5px #f0a5b9 solid;
+  background-color: #1f1f1f;
+}
+
+.info__icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  display: flex;
+  gap: 5%;
+  justify-content: start;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 5px solid #1f1f1f;
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.decoration--contact-me {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .contact__marquee-background {
+    display: none;
+  }
+  .contact__info {
+    clip-path: none;
+  }
+  .section--contact {
+    position: relative;
+    width: 50vw;
+    background-color: #1f1f1f;
+  }
+  .info__heading {
+    position: absolute;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    top: 50px;
+    width: fit-content;
+    border-color: #1f1f1f;
+    font-size: 50px;
+    text-align: center;
+    -webkit-text-fill-color: #f7f7f7;
+    -webkit-text-stroke-color: #1f1f1f;
+  }
+  .info__heading--span {
+    -webkit-text-fill-color: #1f1f1f;
+    -webkit-text-stroke-color: #f7f7f7;
+  }
+  .decoration--contact-me {
+    display: block;
+    position: absolute;
+    top: 320px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 200px;
+    width: 200px;
+    position: relative;
+    animation: rotate-effect 20s linear infinite;
+    z-index: 3;
+  }
+  @keyframes rotate-effect {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .decoration-span--contact-me {
+    position: absolute;
+    left: 50%;
+    transform-origin: 0 100px;
+    color: #f7f7f7;
+    z-index: 20;
+  }
+}
+/* Base styles for the tech list section */
+.section--tech-list {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  background-color: #f7f7f7;
+  padding: 30px 20px;
+}
+
+/* Container styles to center content vertically and horizontally */
+.container--tech-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+}
+
+/* Grid layout for the tech list */
+.tech-list {
+  display: grid;
+  max-width: 300px;
+}
+
+/* Grid layout for the tech list, with responsive adjustments */
+.tech-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(50px, 1fr));
+  gap: 10px;
+  width: 100%;
+  max-width: 300px;
+}
+
+/* Styles for individual list items */
+.tech-list__li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Animation and visibility for hidden list items */
+.hidden--tech-list {
+  opacity: 0;
+  filter: blur(2px);
+  transition: opacity 1s, transform 1s; /* Optimized transition property */
+  transform: translateX(-100%);
+}
+
+/* Staggered animation delays */
+.hidden--tech-list:nth-child(2n) {
+  transition-delay: 200ms;
+}
+
+.hidden--tech-list:nth-child(3n) {
+  transition-delay: 400ms;
+}
+
+/* Sidebar button color overrides */
+.override-color--sidebar-btn,
+.override-color--sidebar-btn::after,
+.override-color--sidebar-btn::before {
+  background-color: #f7f7f7;
+  border-color: #1f1f1f;
+}
+
+/* Styles for individual list items, allowing them to grow */
+.tech-list__li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.inter-section-decoration--tech-list {
+  position: absolute;
+  margin: auto;
+  background-color: #1f1f1f;
+  transition: 1s all;
+  top: 0px;
+}
+@media screen and (max-width: 1200px) {
+  .inter-section-decoration--tech-list {
+    left: 0px;
+    right: 0px;
+    width: 5px;
+    height: 0px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .inter-section-decoration--tech-list {
+    top: 0px;
+    bottom: 0px;
+    width: 0px;
+    height: 2px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .inter-section-decoration--tech-list.extend-decor {
+    height: 25px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section--tech-list {
+    width: 85vw;
+  }
+  .inter-section-decoration--tech-list {
+    position: absolute;
+    margin: auto;
+    background-color: #1f1f1f;
+    transition: 1s all;
+    left: 0px;
+  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1200px) {
+  .inter-section-decoration--tech-list {
+    left: 0px;
+    right: 0px;
+    width: 5px;
+    height: 0px;
+  }
+}
+@media screen and (min-width: 1200px) and (min-width: 1200px) {
+  .inter-section-decoration--tech-list {
+    top: 0px;
+    bottom: 0px;
+    width: 0px;
+    height: 2px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .inter-section-decoration--tech-list.extend-decor {
+    width: 75px;
+  }
+  .tech-list {
+    grid-template-columns: repeat(3, minmax(185px, 1fr)); /* Larger min size for wider screens */
+    max-width: fit-content;
+  }
+}
+html,
+body {
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  font-family: "League Spartan", sans-serif;
+  scroll-behavior: smooth;
+}
+
+@media screen and (min-width: 1200px) {
+  main {
+    display: flex;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    white-space: nowrap; /* Prevents wrapping of child elements */
+    width: 100%;
+    height: 100vh;
+    scroll-behavior: smooth;
+  }
+  main section {
+    flex: 0 0 auto; /* Prevents sections from growing or shrinking */
+    width: 100vw;
+  }
+}
+
+/*# sourceMappingURL=output.css.map */
